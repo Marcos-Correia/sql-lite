@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MySQLite</string>
+    <string name="cidade">Cidade</string>
+    <string name="city_name">City Name</string>
+    <string name="_1000">1000</string>
+    <string name="n_mero_de_habitantes">Número de Habitantes</string>
+    <string name="city_name0">City name</string>
+    <string name="name">Name</string>
+    <string name="population">Population</string>
+    <string name="save">Save</string>
+</resources>
