@@ -52,13 +52,5 @@
                 android:inputType="number" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_weight="1"
-            android:onClick="onSaveForm"
-            android:text="@string/save" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

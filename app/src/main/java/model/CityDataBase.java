@@ -64,7 +64,7 @@ public class CityDataBase extends SQLiteOpenHelper {
         values.put(COL_POPULATION, city.getPopulation());
         String _id = String.valueOf(city.getId());
 
-        int count = sqLiteDatabase.delete(DB_TABLE, COL_ID+"=?", new String[]{_id});
+        int count = sqLiteDatabase.update(DB_TABLE, values,COL_ID+"=?", new String[]{_id});
         sqLiteDatabase.close();
 
         return count;

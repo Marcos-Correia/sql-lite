@@ -27,11 +27,17 @@ public class CityForm extends AppCompatActivity {
 
     }
 
-    public void onSaveForm(View v){
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
         DataStore ds = DataStore.getInstance();
         if(ds.getEditingCityIndex()!=null){
-            // fix
-            ds.editCity(ds.getCity(ds.getEditingCityIndex()),ds.getEditingCityIndex());
-        }
+            ds.getCity(ds.getEditingCityIndex()).setName(this.cityName.getText().toString());
+            ds.getCity(ds.getEditingCityIndex()).setPopulation(Integer.parseInt(this.cityPopulation.getText().toString()));
+        ds.editCity(ds.getCity(ds.getEditingCityIndex()),ds.getEditingCityIndex());
+        ds.setEditingCityIndex(null);
+    }else{
+        ds.addCity(new City(this.cityName.getText().toString(),Integer.parseInt(this.cityPopulation.getText().toString())));
+    }
     }
 }
